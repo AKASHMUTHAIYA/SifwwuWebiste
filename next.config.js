@@ -7,6 +7,7 @@ const nextConfig = {
     domains: ['res.cloudinary.com'],
     unoptimized: false 
   },
+  output: 'standalone',
 };
 
 module.exports = nextConfig;
