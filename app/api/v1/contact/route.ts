@@ -15,7 +15,16 @@ const contactSchema = z.object({
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const contactData = contactSchema.parse(body);
+    const validatedData = contactSchema.parse(body);
+    
+    // Type assertion since Zod validation ensures required fields exist
+    const contactData = validatedData as {
+      name: string;
+      email: string;
+      subject: string;
+      message: string;
+      phone?: string;
+    };
 
     await connectToDatabase();
     
