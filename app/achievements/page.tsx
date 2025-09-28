@@ -37,13 +37,14 @@ export default function AchievementsPage() {
   }, []);
 
   // Default achievements if API fails
-  const defaultAchievements = [
+  const defaultAchievements: Achievement[] = [
     {
       _id: '1',
       title: 'Industry Recognition',
       description: 'Received recognition from major film industry bodies for our welfare initiatives and contribution to the South Indian cinema community.',
       date: new Date('2024-01-15').toISOString(),
       order: 1,
+      image: undefined,
     },
     {
       _id: '2',
@@ -51,6 +52,7 @@ export default function AchievementsPage() {
       description: 'Successfully provided support and assistance to over 1000+ film industry workers, helping them with various welfare programs and opportunities.',
       date: new Date('2024-06-10').toISOString(),
       order: 2,
+      image: undefined,
     },
     {
       _id: '3',
@@ -58,6 +60,7 @@ export default function AchievementsPage() {
       description: 'Implemented comprehensive worker protection measures across multiple film sets, ensuring safety and fair treatment for all professionals.',
       date: new Date('2024-09-20').toISOString(),
       order: 3,
+      image: undefined,
     },
   ];
 
